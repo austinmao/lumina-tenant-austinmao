@@ -1,0 +1,65 @@
+analytics:
+  ga4_property: ${GA4_AUSTINMAO}
+bot_name: Yumi
+brand_root: brands/austinmao/
+cognition_registry:
+  high/premium/critical:
+    model: claude-opus-4-6
+  low/economy/low:
+    model: gemini-2.5-flash-lite
+  medium/standard/low:
+    fallback: deepseek/deepseek-v3
+    model: claude-sonnet-4-6
+compatibility:
+  gateway_version: 2026.3.8
+  required_soul_sections:
+  - Who I Am
+  - Core Principles
+  - Boundaries
+  - Communication Style
+  - Security Rules
+  - Memory
+  skill_frontmatter_required:
+  - name
+  - description
+  - permissions
+config_policy:
+  collision_mode: defer
+  owned_key_prefixes:
+  - agents.
+  - skills.
+content_sources:
+  airtable_retreats: false
+  campaign_api: false
+  chroma_corpus: austin_teachings
+  senja: false
+domain: austinmao.com
+name: austinmao
+notifications:
+  channels:
+  - audience: operator
+    channel: slack
+    significance: summary_notify
+  defaults:
+    on_apply: summary_notify
+    on_qa_fail: summary_notify
+    on_rollback: priority_notify
+operator:
+  contact: slack:#lumina-bot
+  name: Austin Mao
+  org: Austin Mao (personal)
+  timezone: America/Denver
+sanity:
+  api_version: '2025-01-01'
+  dataset: austinmao
+  project_id: lcbe3reu
+site_dir: sites/austinmao/
+site_id: austinmao
+template_remote: https://github.com/austinmao/lumina-tenant-template
+template_version: v1.0.0
+vercel:
+  project: austinmao-com
+  team: ${VERCEL_TEAM_ID}
+website:
+  blueprint: docs/website/austinmao/blueprint.md
+  build_log: docs/website/austinmao/build-log.md

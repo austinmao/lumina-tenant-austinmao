@@ -1,0 +1,8 @@
+# Routing targets for the Austin Mao instance (austinmao.com)
+targets:
+  austinmao.general:
+    email:
+      address: yumi@mail.austinmao.com
+      description: "Yumi general outbound email"
+audience_labels:
+  austinmao.general: "Yumi — general outbound email"

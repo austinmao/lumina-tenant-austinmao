@@ -1,0 +1,38 @@
+version: '1'
+default: deny
+allowlists:
+  shared:
+    email:
+    - austinmao.general
+  direct: {}
+checks:
+- name: target_exists
+  description: Resolved target must not be null
+  path: resolved.target
+  op: exists
+- name: target_in_gate_allowlist
+  description: Resolved route must be allowed by the gate-owned outbound allowlist
+  path: resolved.allowlist_key
+  op: in
+  source: gate_allowlist
+- name: audience_matches
+  description: Audience label must be present
+  path: resolved.audience_label
+  op: exists
+- name: live_identity_matches
+  description: When live verification is supported, the live target identity must
+    match the expected metadata
+  path: resolved.live_identity_match
+  op: equals
+  value: true
+  skip_when_false: resolved.verification_supported
+- name: channel_enabled
+  description: Channel must be enabled in gateway config
+  path: input.channel
+  op: in
+  source: enabled_channels
+- name: target_passes_gateway_constraints
+  description: Resolved target must also satisfy any channel-level gateway constraints
+  path: resolved.target
+  op: passes
+  source: gateway_constraints

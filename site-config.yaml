@@ -1,0 +1,29 @@
+# Austin Mao tenant config
+# Created: 2026-03-16
+
+site_id: austinmao
+domain: austinmao.com
+brand_root: brands/austinmao/
+site_dir: sites/austinmao/
+
+sanity:
+  project_id: lcbe3reu
+  dataset: austinmao
+  api_version: "2025-01-01"
+
+vercel:
+  project: austinmao-com
+  team: ${VERCEL_TEAM_ID}
+
+analytics:
+  ga4_property: ${GA4_AUSTINMAO}
+
+website:
+  blueprint: docs/website/austinmao/blueprint.md
+  build_log: docs/website/austinmao/build-log.md
+
+content_sources:
+  senja: false
+  airtable_retreats: false
+  chroma_corpus: austin_teachings
+  campaign_api: false

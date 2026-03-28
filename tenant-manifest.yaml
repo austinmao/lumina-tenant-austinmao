@@ -1,0 +1,36 @@
+customer_id: austinmao
+template_version: v0.2.0
+last_sync_date: '2026-03-28'
+enabled_packs: []
+modified_files:
+- path: README.md
+  tenant_hash: sha256:e2dd384d77d84ab29b1e157ce01ade3e54584bf5c3c059445c0cc4b3ef5a57cc
+  template_hash: sha256:39d6e8e6086aae5f62ed0aa68600b5694de54b3785fb63e675e6470140ce12b0
+  policy: platform-managed
+- path: agents/content/copywriter/MEMORY.md
+  tenant_hash: sha256:65d9f3e9edc42163b95bfcaa2105ebf082e080c72a88dcc121c74f841f7990f3
+  template_hash: sha256:a9f1ddb0ab5da7850f58a0212af14e2396c8d9e296c3c9a94a800e74b949082b
+  policy: tenant-owned
+- path: agents/engineering/frontend-engineer/MEMORY.md
+  tenant_hash: sha256:2b3202639b54553f1ef5ac67e26a6c70ebc401c8028d893306e74624f914f0be
+  template_hash: sha256:a9f1ddb0ab5da7850f58a0212af14e2396c8d9e296c3c9a94a800e74b949082b
+  policy: tenant-owned
+- path: agents/operations/knowledge-sync/MEMORY.md
+  tenant_hash: sha256:95fa6d266011fe139620d883a1fb0432d132f7d069bd63bb2d262a8497ec6930
+  template_hash: sha256:a9f1ddb0ab5da7850f58a0212af14e2396c8d9e296c3c9a94a800e74b949082b
+  policy: tenant-owned
+- path: agents/sales/director/MEMORY.md
+  tenant_hash: sha256:3acb344f63e47851eb1a33bd239fa200585d55fb6b791d34bea4c897c98eec91
+  template_hash: sha256:a9f1ddb0ab5da7850f58a0212af14e2396c8d9e296c3c9a94a800e74b949082b
+  policy: tenant-owned
+- path: site-config.yaml
+  tenant_hash: sha256:af37e365cc242b7f0956753b16a41fa3425376501a96c1ed8efda00f2ac24d06
+  template_hash: sha256:a864896fc7d845b2dce5513614b5d0f98a77a81342ffb59094af259891c6aab3
+  policy: platform-managed
+- path: tenant.yaml
+  tenant_hash: sha256:cef4d77e3adcedd2ad41846dd1a43d829717a381e3370345de8bb31744ff5d88
+  template_hash: sha256:c98a731f80a15e5f5071fdf53f348a09f1d5d3e3b6d6fb23398a1cc22bc8f5a3
+  policy: tenant-owned
+custom_agents:
+- operations/transcript-curator
+custom_skills: []
